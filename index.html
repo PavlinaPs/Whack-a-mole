@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Along with Ania Kubow | Whac-a-mole">
+    <meta name="description" content="Whack-a-mole | inspired by Ania Kubow's video">
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,13 +13,13 @@
     
     <link rel="shortcut icon" href="./images/cover.png" type="image/x-icon">
     
-    <title>Whac-a-mole</title>
+    <title>Whack-a-mole</title>
 
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <h1>Whac-a-mole</h1>
+    <h1>Whack-a-mole</h1>
     <h2>Score: <span id="score">0</span></h2>
     <h2>Time left: <span id="time-left">60</span></h2>
 
@@ -33,6 +33,11 @@
         <div class="square" id="7"></div>
         <div class="square" id="8"></div>
         <div class="square" id="9"></div>
+    </div>
+
+    <div hidden class="game-over">
+        <!-- ignoring singular here -->
+        GAME OVER!<br>You got <span id="result"></span> moles. <br><span id="saysMartin"></span>
     </div>
     
     <script src="app.js"></script>
