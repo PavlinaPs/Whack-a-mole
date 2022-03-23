@@ -18,31 +18,41 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <h1>Whack-a-mole</h1>
-    <h2>Score: <span id="score">0</span></h2>
-    <h2>Time left: <span id="time-left">60</span></h2>
-
-    <button id="newGame">Play new game</button>
-
-    <div class="grid">
-        <div class="square" id="1"></div>
-        <div class="square" id="2"></div>
-        <div class="square" id="3"></div>
-        <div class="square" id="4"></div>
-        <div class="square" id="5"></div>
-        <div class="square" id="6"></div>
-        <div class="square" id="7"></div>
-        <div class="square" id="8"></div>
-        <div class="square" id="9"></div>
-    </div>
-
-    <div hidden class="game-over">
-        <!-- ignoring singular here -->
-        GAME OVER!<br>You got <span id="result"></span> moles. <br><span id="saysMartin"></span>
-    </div>
-
     
+
+    <main>
+        <button id="soundOff" sound-off="false"></button>
+
+        <section class="info">
+            <h1>Whack<br>a<br>mole</h1>
+            <h2>Score: <span id="score">0</span></h2>
+            <h2>Time left: <span id="time-left">60</span></h2>
+            
+            <button id="newGame">Play new game</button>
+        </section>
+
+        <section>
+            <div class="grid">
+                <div class="square" id="1"></div>
+                <div class="square" id="2"></div>
+                <div class="square" id="3"></div>
+                <div class="square" id="4"></div>
+                <div class="square" id="5"></div>
+                <div class="square" id="6"></div>
+                <div class="square" id="7"></div>
+                <div class="square" id="8"></div>
+                <div class="square" id="9"></div>
+            </div>
+
+            <div hidden class="game-over">
+                <div class="end">GAME OVER!</div>
+                <!-- ignoring singular here -->
+                <div class="end-score">You got <span id="result"></span> moles.</div>
+                <div class="says-Martin"><span id="saysMartin"></span></div>
+            </div>
+        </section>
+
+    </main>
     
     <script src="app.js"></script>
 </body>
