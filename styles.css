@@ -1,0 +1,47 @@
+/*custom variables*/
+:root {
+    --ff-sans: 'Smooch Sans', sans-serif;
+
+    --color-light: beige;
+    --color-mid: #fff983;
+    --color-dark: #9dcdc0;
+    --color-congrats: red;
+}
+
+/*reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*setup*/
+body {
+    /* display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    gap: 0; */
+    height: 100vh;
+    font-family: var(--ff-sans);
+    background-color: var(--color-dark);
+}
+
+/*components*/
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+    
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    border: 1px solid blue;
+}
+
+.mole {
+    background-color: palevioletred;
+}
