@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Whack-a-mole | inspired by Ania Kubow's video">
 
@@ -11,24 +10,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans&display=swap" rel="stylesheet">
     
-    <link rel="shortcut icon" href="./images/cover.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/mole-icon32px.png" type="image/x-icon">
     
     <title>Whack-a-mole</title>
 
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
 
     <main>
-        <button id="soundOff" sound-off="false"></button>
+        <button id="soundOff" sound-off="false" aria-label="sound-toggle"></button>
 
         <section class="info">
-            <h1>Whack<br>a<br>mole</h1>
+            <h1 class="newGame-desktop">Whack<br>a<br>mole</h1>
+            <h1 class="newGame-mobile">Whack-a-mole</h1>
             <h2>Score: <span id="score">0</span></h2>
             <h2>Time left: <span id="time-left">60</span></h2>
             
-            <button id="newGame">Play new game</button>
+            <button class="newGame newGame-desktop" id="newGame-button-desktop">Play new game</button>
         </section>
 
         <section>
@@ -51,6 +50,7 @@
                 <div class="says-Martin"><span id="saysMartin"></span></div>
             </div>
         </section>
+        <button class="newGame newGame-mobile" id="newGame-button-mobile">Play new game</button>
 
     </main>
     

@@ -3,8 +3,8 @@ const whackSound = new Audio('./sound/mixkit-metal-hammer-hit-833.wav');
     whackSound.volume = 0.3;
 const gameOverSound = new Audio('./sound/mixkit-funny-game-over-2878.wav');
     gameOverSound.volume = 0.4;
-const errorSound = new Audio('mixkit-game-show-buzz-in-3090.wav');
-    errorSound.volume = 1;
+const errorSound = new Audio('./sound/mixkit-game-show-buzz-in-3090.wav');
+    errorSound.volume = 0.4;
 
 // sound toggle
 const soundButon = document.getElementById('soundOff');
@@ -18,7 +18,7 @@ soundButon.addEventListener('click', () => {
     } else {
         soundButon.setAttribute('sound-off', false);
         whackSound.volume = 0.3;
-        errorSound.volume = 1;
+        errorSound.volume = 0.4;
         gameOverSound.volume = 0.4;
     }
 });
@@ -31,7 +31,8 @@ const gameBoard = document.querySelector('.grid');
 const gameOver = document.querySelector('.game-over');
 const resultGameOver = document.getElementById('result');
 const saysMartin = document.getElementById('saysMartin');
-const newGameButton = document.getElementById('newGame');
+const newGameButtonDesktop = document.getElementById('newGame-button-desktop');
+const newGameButtonMobile = document.getElementById('newGame-button-mobile');
 
 let lockboard = false;
     
@@ -42,8 +43,7 @@ function playWhackAMole() {
     var timerId = null;
     let martinsLine;
     
-    if(lockboard === true) {
-        errorSound.play();
+    if(lockboard === true) {    
         return;
     }
 
@@ -115,9 +115,21 @@ function playWhackAMole() {
 }
 playWhackAMole();
 
-newGameButton.addEventListener('click', playNewGame);
+
+newGameButtonDesktop.addEventListener('click', playNewGame);
 
 function playNewGame() {
+    gameOver.setAttribute('hidden', '');
+    gameBoard.removeAttribute('hidden');
+    playWhackAMole();
+}
+
+newGameButtonMobile.addEventListener('click', playNewGame);
+
+function playNewGame() {
+    if(lockboard === true) {
+        errorSound.play();
+    }
     gameOver.setAttribute('hidden', '');
     gameBoard.removeAttribute('hidden');
     playWhackAMole();
