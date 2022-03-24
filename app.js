@@ -73,7 +73,7 @@ function playWhackAMole() {
     })
 
     function moveMole() {
-        timerId = setInterval(selectRandom, 750);
+        timerId = setInterval(selectRandom, 625);
     }
     moveMole()
 
